@@ -1,0 +1,57 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+function hideimg() {
+	document.getElementById("largescreenshot").style.display="none";
+}
+function showimg (url) {
+
+url = "/" + url;
+//window.open(url,'_blank',toolbar='no', status='no', menubar='no', location='no');
+window.open(url,'_blank');
+
+/*
+	if (!document.getElementById("largescreenshot")) {
+		document.body.innerHTML = document.body.innerHTML + 
+		"<div align='center' id='largescreenshot' style='position:fixed;top:0;left:0;height:400px;width:100%;border: solid 1px #000;'>" + 
+		"<a href='javascript:hideimg();'>"+
+		"<img id='sshot' src='"+ url +"' style='border-width:0px;'>" +
+		"</a></div>";
+	} else {
+		document.getElementById("sshot").src = url;	
+		document.getElementById("largescreenshot").style.display="";
+	}
+*/
+}
+
+}
+/*
+     FILE ARCHIVED ON 10:02:17 Dec 11, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:36:10 Jan 03, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 188.96
+  exclusion.robots: 0.099
+  exclusion.robots.policy: 0.091
+  RedisCDXSource: 0.628
+  esindex: 0.009
+  LoadShardBlock: 170.794 (3)
+  PetaboxLoader3.datanode: 258.719 (4)
+  CDXLines.iter: 15.0 (3)
+  load_resource: 203.27
+  PetaboxLoader3.resolve: 82.618
+*/

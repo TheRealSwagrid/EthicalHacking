@@ -1,0 +1,508 @@
+BODY {
+
+	margin: 0px 20px 0px 20px;
+	background-color: #555555;
+	height: 100%;
+}
+
+TD {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	font-family: Verdana;
+	font-size: 13px;
+}
+
+
+H1 {
+	font-family: Tahoma;
+	font-size: 18px;
+	color: #4D4D4D;
+	font-weight:bold;
+	margin-top: 0px;
+	margin-bottom: 10px;
+	margin-right: 0px;
+	padding: 15px 15px 5px 15px;
+}
+
+H2 {
+	font-family: Verdana;
+	font-size: 17px;
+	color: #000000;
+	font-weight:bold;
+	padding-top: 5px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+}
+
+H3 {
+	font-family: Tahoma;
+	font-size: 15px;
+	color: #000000;
+	font-weight:bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 5px 0px 0px;
+}
+
+FORM, DIV {
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+UL {
+	padding: 5px 5px 5px 14px;
+	margin: 0px 0px 0px 0px;
+}
+
+.logomain {
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/logo.gif");
+	background-color: #ffffff;
+	height: 141px;
+	width: 313px;
+}
+
+.logomain2 {
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_top.gif");
+	background-color: #1d4986;
+}
+
+.logomain3 {
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_top2.gif");
+	background-color: #ffffff;
+}
+
+
+
+.menutop {
+background-color: #e3e3e3;
+border-style: solid;
+border-width: 1px;
+border-color: #dedede #dedede #dedede #dedede ;
+height: 50px;
+padding: 0px 10px 0px 10px;
+}
+
+
+
+
+.bord {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #dedede #dedede #dedede #dedede ;
+}
+
+.bord2 {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #555555 ;
+}
+
+.headertitle {
+	font-weight: bold;
+	font-size: 11px;
+	color: #202020;
+	background-color: #cacaca;
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title2.gif");
+	height: 20px;
+	padding-right: 5px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+
+
+
+.highlighttext {
+	color: #000000;
+	background-color: #eaeaea;
+	padding-left: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.newstext {
+	font-size:12px;
+}
+
+.newsofttext {
+	font-size:11px;
+}
+
+.featuredtext {
+	font-size:12px;
+}
+
+.lastforumstext {
+	font-size:11px;
+}
+
+
+.date {
+	color: #cacaca;
+	font-size:10px;
+	font-weight: bold;
+}
+
+
+
+
+
+.headtitle {
+	text-align: left;
+	font-weight: bold;
+	font-size: 11px;
+	color: #000000;
+	background-color: #ffffff;
+	height: 30px;
+	padding-right: 5px;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+.mainblocks {
+	font-size: 13px;
+	background-color: #ffffff;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+
+.rssfeed {
+	text-align: left;
+	font-size: 11px;
+	background-color: #3f7cb8;
+	padding-right: 8px;
+	padding-left: 8px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+
+.coverbg {
+	background-color: #dedede;
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_page1.gif");
+}
+.articlesbg {
+	background-color: #ffffff;
+}
+
+.archivebg {
+	background-color: #eaeaea;
+}
+
+
+.noticebg {
+	background-color: #ffffde;
+}
+
+.featuredbg {
+	background-color: #fffffa;
+}
+
+.newsoftbg {
+	background-color: #fafafa;
+}
+
+.forumbg {
+	background-color: #fffffa;
+}
+
+
+A.menu {
+font-family: Verdana;
+color: #202020;
+text-decoration: none;
+}
+A.menu:hover {color:#6e6e6e;}
+
+A.red {
+color: #aa0000;
+}
+
+
+.advertisetext, a.advertisetext {  
+text-align: center;
+background-color: #555555;
+font-size: 10px;
+color: #e0e0e0;
+padding-right: 2px;
+padding-left: 2px;
+padding-top: 1px;
+padding-bottom: 1px;
+  }
+
+.basetext {  
+padding-right: 8px;
+padding-left: 8px;
+padding-top: 8px;
+padding-bottom: 8px;
+  }
+
+
+
+
+.bottomcopyright {
+	text-align: center;
+	font-size: 10px;
+	background-color: #9f9f9f;
+	height: 22px;
+	padding-right: 5px;
+	padding-left: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+
+
+.row {
+padding-right: 5px;
+padding-left: 5px;
+padding-top: 5px;
+padding-bottom: 5px;
+font-size: 11px;
+color: black;
+} 
+
+
+
+.bgd {
+
+}
+
+.bgderror {
+background-color: #EB5050;
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_error.gif");
+}
+
+
+.recommended {
+background-color: #D0EFFF;
+}
+
+
+
+
+
+
+
+A { 
+	color: #143CD1;
+	text-decoration: none;
+}
+
+A.mtop { 
+text-decoration: none;
+color: #ffffff;
+}
+
+A.mtop:hover { 
+text-decoration: none;
+color: #FAFA00;
+}
+
+
+A.cat {
+font-family: Verdana;
+font-size: 11px;
+color: #3E3E3E;
+text-decoration: none;
+}
+A.cat:hover {color:#000000;}
+
+
+A.cattab {
+font-family: Verdana;
+font-size: 11px;
+color: #ffffff;
+text-decoration: none;
+}
+
+A.cattab1 {
+font-family: Verdana;
+font-size: 11px;
+color: #000000;
+text-decoration: none;
+}
+
+
+
+A.pagelink {
+font-family: Verdana;
+font-size: 11px;
+font-weight: bold;
+color: #0000C7;
+text-decoration: none;
+}
+A.pagelink:hover {color:#FFFFFF;}
+
+
+TEXTAREA, INPUT, SELECT {
+font-family: Verdana;
+font-size: 9pt;
+text-indent: 3px;
+}
+
+INPUT.button {
+text-indent: 0px;
+background-color: #d4d0c8;
+}
+
+
+TEXTAREA { 
+overflow: auto;
+ }
+
+
+.b { font-weight: bold; }
+
+.txt {
+text-align: justify;
+padding: 8px 8px 8px 8px;
+}
+
+.top {
+padding: 8px 8px 8px 8px;
+}
+
+
+ .error { 
+font-weight: bold;
+color: #AA0000;
+ }
+
+.formerror { 
+background-color: #EBC98F;
+ }
+
+.small {
+font-size: 11px;
+}
+
+.required_field {
+font-family: Tahoma;
+font-size:13px;
+font-weight: bold;
+color: red;
+}
+
+
+
+.tab {
+	text-align: center;
+	background-color: #1d4986;
+	padding-right: 5px;
+	padding-left: 6px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_top.gif");
+	white-space: nowrap;
+}
+
+.tab1 {
+	text-align: center;
+	background-color: #ffffff;
+	padding-right: 3px;
+	padding-left: 7px;
+	padding-top: 8px;
+	padding-bottom: 6px;
+	background-image:url("/web/20070624211230im_/http://www.onekit.com/img/tab_pressed.gif");
+	white-space: nowrap;
+}
+
+
+
+
+.rowtablet {
+padding: 7px 7px 7px 7px;
+font-size: 11px;
+background-color: #bebebe;
+border-style: solid;
+border-width: 1px;
+border-color: #ededed #aaaaaa #aaaaaa #ededed ;
+} 
+
+
+.bgline {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title.gif");
+height: 34px;
+padding: 0px 5px 0px 10px;
+color: #ffffff;
+}
+
+
+.bgline_blue {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title_blue.gif");
+height: 34px;
+padding: 0px 5px 0px 10px;
+color: #ffffff;
+}
+
+.bgline_red {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title_red.gif");
+height: 34px;
+padding: 0px 5px 0px 10px;
+color: #ffffff;
+}
+
+.bgline_gold {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title_gold.gif");
+height: 34px;
+padding: 0px 5px 0px 10px;
+color: #ffffff;
+}
+
+
+
+.bgline2 {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title2.gif");
+height: 27px;
+padding: 0px 5px 0px 10px;
+}
+
+.bgline3 {
+background-image:url("/web/20070624211230im_/http://www.onekit.com/img/bg_title3.gif");
+height: 34px;
+padding: 0px 5px 0px 10px;
+}
+
+.bgline4 {
+font-size: 11px;
+color: #303030;
+background-color: #ededed;
+border-style: solid;
+border-width: 1px;
+border-color: #cdcdcd #808080 #808080 #cdcdcd ;
+height: 26px;
+padding: 0px 20px 0px 10px;
+}
+
+
+
+
+IMG {
+vertical-align: middle;
+}
+/*
+     FILE ARCHIVED ON 21:12:30 Jun 24, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:36:10 Jan 03, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 69.654
+  exclusion.robots: 0.083
+  exclusion.robots.policy: 0.076
+  RedisCDXSource: 2.012
+  esindex: 0.006
+  LoadShardBlock: 51.878 (3)
+  PetaboxLoader3.datanode: 66.047 (4)
+  CDXLines.iter: 13.509 (3)
+  load_resource: 150.992
+  PetaboxLoader3.resolve: 30.034
+*/

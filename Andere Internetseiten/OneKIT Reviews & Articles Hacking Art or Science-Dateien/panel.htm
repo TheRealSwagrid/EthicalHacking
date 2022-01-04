@@ -1,0 +1,169 @@
+var _____WB$wombat$assign$function_____ = function(name) {return (self._wb_wombat && self._wb_wombat.local_init && self._wb_wombat.local_init(name)) || self[name]; };
+if (!self.__WB_pmw) { self.__WB_pmw = function(obj) { this.__WB_source = obj; return this; } }
+{
+  let window = _____WB$wombat$assign$function_____("window");
+  let self = _____WB$wombat$assign$function_____("self");
+  let document = _____WB$wombat$assign$function_____("document");
+  let location = _____WB$wombat$assign$function_____("location");
+  let top = _____WB$wombat$assign$function_____("top");
+  let parent = _____WB$wombat$assign$function_____("parent");
+  let frames = _____WB$wombat$assign$function_____("frames");
+  let opener = _____WB$wombat$assign$function_____("opener");
+
+function m_out (ctl) {
+	ctl.className = "panelbtn";
+}
+
+function m_over (ctl) {
+	ctl.className = "panelbtn_hover";
+}
+
+function m_down (ctl) {
+	ctl.className = "panelbtn_active";
+}
+
+function m_up (ctl) {
+	ctl.className = "panelbtn";
+}
+
+
+
+
+
+
+if (!panelshow_before) { var panelshow_before = 1; }
+if (!readCookie('onekit_panel_cookie')) { createCookie('onekit_panel_cookie',1,7); }
+
+function panelshow (nmbr) {
+createCookie('onekit_panel_cookie',nmbr,7);
+
+	if (document.getElementById("panel"+nmbr).style.display=="") { 
+	
+	
+	opacity("panelbtn"+nmbr, 0, 100, 150, 1);
+//	document.getElementById("panelbtn"+nmbr).style.display="";
+		
+		opacity("panel"+nmbr, 100, 0, 350, 0);
+		//document.getElementById("panel"+nmbr).style.display="none";
+
+	} else {
+		opacity("panelbtn"+nmbr, 100, 0, 150, 0);
+		//document.getElementById("panelbtn"+nmbr).style.display="none";
+		opacity("panel"+nmbr, 0, 100, 350, 1);
+		//document.getElementById("panel"+nmbr).style.display="";
+	}
+
+	opacity("panel"+panelshow_before, 100, 0, 350, 0);
+	//document.getElementById("panel"+panelshow_before).style.display="none";
+	opacity("panelbtn"+panelshow_before, 0, 100, 150, 1);
+	//document.getElementById("panelbtn"+panelshow_before).style.display="";
+	panelshow_before = nmbr;
+
+	
+}
+
+function panelshow_rapidly (nmbr) {
+	document.getElementById("panel"+panelshow_before).style.display="none";
+	document.getElementById("panelbtn"+panelshow_before).style.display="";
+
+		document.getElementById("panelbtn"+nmbr).style.display="none";
+		document.getElementById("panel"+nmbr).style.display="";
+
+	panelshow_before = nmbr;
+	createCookie('onekit_panel_cookie',nmbr,7);
+}
+
+
+// opacity.js begin  
+
+function opacity(id, opacStart, opacEnd, millisec, show) {
+
+if (show) { document.getElementById(id).style.display="";}
+if (!show) { document.getElementById(id).style.display="none"; }
+
+    //speed for each frame
+    var speed = Math.round(millisec / 100);
+    var timer = 0;
+
+    //determine the direction for the blending, if start and end are the same nothing happens
+    if(opacStart > opacEnd) {
+        for(i = opacStart; i >= opacEnd; i--) {
+            setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed));
+            timer++;
+        }
+    } else if(opacStart < opacEnd) {
+        for(i = opacStart; i <= opacEnd; i++)
+            {
+            setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed));
+            timer++;
+        }
+    }
+	
+	
+	
+}
+
+//change the opacity for different browsers
+function changeOpac(opacity, id) {
+    var object = document.getElementById(id).style;
+    object.opacity = (opacity / 100);
+    object.MozOpacity = (opacity / 100);
+    object.KhtmlOpacity = (opacity / 100);
+    object.filter = "alpha(opacity=" + opacity + ")";
+} 
+
+// opacity.js end 
+
+
+
+
+
+//cookie
+
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
+}
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+
+function eraseCookie(name) {
+	createCookie(name,"",-1);
+}
+
+}
+/*
+     FILE ARCHIVED ON 10:01:50 Dec 11, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:36:11 Jan 03, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 992.394
+  exclusion.robots: 0.079
+  exclusion.robots.policy: 0.072
+  RedisCDXSource: 6.065
+  esindex: 0.006
+  LoadShardBlock: 970.363 (3)
+  PetaboxLoader3.datanode: 547.854 (4)
+  CDXLines.iter: 13.594 (3)
+  load_resource: 258.159
+  PetaboxLoader3.resolve: 120.852
+*/

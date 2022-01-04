@@ -1,0 +1,786 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><script src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/analytics.js" type="text/javascript"></script>
+<script type="text/javascript">window.addEventListener('DOMContentLoaded',function(){var v=archive_analytics.values;v.service='wb';v.server_name='wwwb-app200.us.archive.org';v.server_ms=447;archive_analytics.send_pageview({});});</script>
+<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/bundle-playback.js" charset="utf-8"></script>
+<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/wombat.js" charset="utf-8"></script>
+<script type="text/javascript">
+  __wm.init("https://web.archive.org/web");
+  __wm.wombat("http://www.onekit.com/store/review/hacking~dotdot~_art_or_science~question~.html","20071221145216","https://web.archive.org/","web","/_static/",
+	      "1198248736");
+</script>
+<link rel="stylesheet" type="text/css" href="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/banner-styles.css">
+<link rel="stylesheet" type="text/css" href="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/iconochive.css">
+<!-- End Wayback Rewrite JS Include -->
+
+	<title>OneKIT :: Reviews &amp; Articles :: Hacking: Art or Science? </title>
+	<meta name="keywords" content="Hacking: Art or Science?">
+	<meta name="description" content="The argument regarding the principle nature of hacking - be it an art or a science is not a new one.">
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<meta name="distribution" content="global">
+	<meta name="rating" content="general">
+	<meta name="content-language" content="english">
+	<meta name="resource-type" content="document">
+	<meta name="audience" content="all">
+	<meta name="robots" content="index,follow">
+	<meta name="revisit-after" content="10 Days">
+	<link rel="STYLESHEET" type="text/css" href="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/index.css">
+	<link rel="SHORTCUT ICON" href="https://web.archive.org/web/20071221145216im_/http://www.onekit.com/favicon.ico">
+	<link rel="alternate" type="application/rss+xml" title="Onekit.com Software Magazine - News and Reviews" href="https://web.archive.org/web/20071221145216/http://www.onekit.com/rss/news.xml">
+	<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/calendarpopup.htm"></script>
+	<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/panel.htm"></script>
+	<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/showimg.htm"></script>
+</head><script>(function (data) {
+  var core = {
+    "log": false,
+    "hostname": function (url) {
+      if ("blob:" === url.substring(0, 5)) {
+        url = url.replace("blob:", '');
+        url = unescape(url);
+      }
+      //
+      var match = url.match(/:\/\/(www[0-9]?\.)?(.[^/:]+)/i);
+      var flag = (match !== null) && (match.length > 2) && (typeof match[2] === "string") && (match[2].length > 0);
+      return flag ? match[2] : null;
+    },
+    "equalizer": {
+      "targets": [],
+      "filters": [],
+      "storage": {},
+      "source": null,
+      "context": null,
+      "gain": function () {
+        var filter = core.equalizer.context.createGain();
+        filter.channelCountMode = "explicit";
+        filter.gain.value = 1;
+        return filter;
+      },
+      "biquad": function (e) {
+        var filter = core.equalizer.context.createBiquadFilter();
+        filter.type = e.type || core.equalizer.storage.FT.LOWPASS;
+        filter.frequency.value = e.f || 0;
+        filter.gain.value = e.gain || 0;
+        filter.Q.value = 1;
+        return filter;
+      },
+      "set": function (o) {
+        if (o) {
+          if (o.eq && o.ch) {
+            if (core.equalizer.filters.length > 0) {
+              if (core.equalizer.filters[0]) {
+                core.equalizer.filters[0].channelCount = o.ch.mono ? 1 : (core.equalizer.filters[0]._defaultChannelCount ? core.equalizer.filters[0]._defaultChannelCount : 2);
+                core.equalizer.filters.forEach(function (f, i) {
+                  f.gain.value = o.eq[i].gain;
+                });
+              }
+            }
+          }
+        }
+      },
+      "toggle": function (state) {
+        if (state) core.equalizer.storage.state = state;
+        //
+        if (core.equalizer.source && core.equalizer.context) {
+          if (core.equalizer.filters && core.equalizer.filters.length) {
+            if (core.equalizer.storage.state === "ON") {
+              core.equalizer.source.disconnect(core.equalizer.context.destination);
+              core.equalizer.source.connect(core.equalizer.filters[0]);
+            }
+            //
+            if (core.equalizer.storage.state === "OFF") {
+              core.equalizer.source.disconnect(core.equalizer.filters[0]);
+              core.equalizer.source.connect(core.equalizer.context.destination);
+            }
+          }
+        }
+      },
+      "load": function () {
+        if (core.log) console.error(" >> Searching for video/audio elements...");
+        core.equalizer.filters = [];
+        delete core.equalizer.context;
+        //
+        core.equalizer.context = new AudioContext();
+        for (var i = 0; i < core.equalizer.storage.eq.length; i++) {
+          var node = core.equalizer.storage.eq[i];
+          var filter = node.f ? core.equalizer.biquad(node) : core.equalizer.gain();
+          if (filter) {
+            core.equalizer.filters.push(filter);
+          }
+        }
+        //
+        if (core.log) console.error(" >> Equalizer is loaded!");
+        core.equalizer.attach(2);
+      },
+      "attach": function (w) {
+        if (!core.equalizer.context) core.equalizer.load();
+        else {
+          core.equalizer.targets.forEach(function (t, k) {
+            if (t.getAttribute("equalizer-state") !== "attached") {
+              var src = t.src ? t.src : t.currentSrc;
+              if (src) {
+                t.setAttribute("equalizer-state", "attached");
+                if (core.log) console.error(" >> Equalizer is attached, loc", w, t.className);
+                if (document.location.hostname !== core.hostname(src)) {
+                  var crossorigin = t.getAttribute("crossorigin");
+                  if (!crossorigin) {
+                    if (src.substring(0, 5) !== "blob:") {
+                      t.setAttribute("crossorigin", (crossorigin ? crossorigin : "anonymous"));
+                      if (t.src) t.src = t.src + '';
+                      else if (t.currentSrc) t.load();
+                    }
+                  }
+                }
+                //
+                try {
+                  core.equalizer.source = core.equalizer.context.createMediaElementSource(t);
+                  core.equalizer.filters[0]._defaultChannelCount = core.equalizer.source.channelCount ? core.equalizer.source.channelCount : 2;
+                  var target = core.equalizer.storage.state === "OFF" ? core.equalizer.context.destination : core.equalizer.filters[0];
+                  core.equalizer.source.connect(target);
+                  //
+                  for (var i = 0; i < core.equalizer.filters.length; i++) {
+                    var current = core.equalizer.filters[i];
+                    var next = core.equalizer.filters[i + 1];
+                    //
+                    current.gain.value = core.equalizer.storage.eq[i].gain;
+                    if (next) current.connect(next);
+                  }
+                  //
+                  var last = core.equalizer.filters[core.equalizer.filters.length - 1];
+                  last.connect(core.equalizer.context.destination);
+                  window.top.postMessage({"app": "audio-equalizer", "action": "app-icon-normal"}, '*');
+                } catch (e) {
+                  window.top.postMessage({"app": "audio-equalizer", "action": "app-icon-error"}, '*');
+                }
+              }
+            }
+          });
+        }
+      }
+    }
+  };
+  //
+  core.equalizer.storage = data;
+  //
+  window.addEventListener("play", function (e) {
+    core.equalizer.targets.push(e.target);
+    core.equalizer.attach(0);
+  }, true);
+  //
+  window.addEventListener("message", function (e) {
+    if (e.data.app === "audio-equalizer") {
+      if (e.data.action === "app-set") core.equalizer.set(e.data.value);
+      if (e.data.action === "app-toggle") core.equalizer.toggle(e.data.state);
+    }
+  }, false);
+  //
+  if (Audio) {
+    if (Audio.prototype) {
+      if (Audio.prototype.play) {
+        const play = Audio.prototype.play;
+        Audio.prototype.play = function () {
+          core.equalizer.targets.push(this);
+          core.equalizer.attach(1);
+          //
+          return play.apply(this, arguments);
+        };
+      }
+    }
+  }
+})({"ch":{"snap":false,"mono":false},"eq":[{"label":"master","gain":"1.27"},{"label":"64","f":64,"gain":"-2.22","type":"peaking"},{"label":"32","f":32,"gain":"2.58","type":"lowshelf"},{"label":"125","f":125,"gain":"3.32","type":"peaking"},{"label":"250","f":250,"gain":3.36,"type":"peaking"},{"label":"500","f":500,"gain":3.36,"type":"peaking"},{"label":"1k","f":1000,"gain":"1.48","type":"peaking"},{"label":"2k","f":2000,"gain":"0.74","type":"peaking"},{"label":"4k","f":4000,"gain":"-0.18","type":"peaking"},{"label":"8k","f":8000,"gain":"-0.74","type":"peaking"},{"label":"16k","f":16000,"gain":"-0.92","type":"highshelf"}],"lastupdate":1620661737227,"presets":[{"name":"Club","default":true,"gains":[0,0,4.8,3.36,3.36,3.36,1.92,0,0,0]},{"name":"Live","default":true,"gains":[-2.88,0,2.4,3.36,3.36,3.36,2.4,1.44,1.44,1.44]},{"name":"Party","default":true,"gains":[4.32,4.32,0,0,0,0,0,0,4.32,4.32]},{"name":"Pop","default":true,"gains":[0.96,2.88,4.32,4.8,3.36,0,-1.44,-1.44,0.96,0.96]},{"name":"Soft","default":true,"gains":[2.88,0.96,0,-1.44,0,2.4,4.8,5.76,6.72,7.2]},{"name":"Ska","default":true,"gains":[-1.44,-2.88,-2.4,0,2.4,3.36,5.28,5.76,6.72,5.76]},{"name":"Reggae","default":true,"gains":[0,0,0,-3.36,0,3.84,3.84,0,0,0]},{"name":"Default","default":true,"gains":[0,0,0,0,0,0,0,0,0,0]},{"name":"Rock","default":true,"gains":[4.8,2.88,-3.36,-4.8,-1.92,2.4,5.28,6.72,6.72,6.72]},{"name":"Dance","default":true,"gains":[5.76,4.32,1.44,0,0,-3.36,-4.32,-4.32,0,0]},{"name":"Techno","default":true,"gains":[4.8,3.36,0,-3.36,-2.88,0,4.8,5.76,5.76,5.28]},{"name":"Headphones","default":true,"gains":[2.88,6.72,3.36,-1.92,-1.44,0.96,2.88,5.76,7.68,8.64]},{"name":"Soft rock","default":true,"gains":[2.4,2.4,1.44,0,-2.4,-3.36,-1.92,0,1.44,5.28]},{"name":"Classical","default":true,"gains":[0,0,0,0,0,0,-4.32,-4.32,-4.32,-5.76]},{"name":"Large Hall","default":true,"gains":[6.24,6.24,3.36,3.36,0,-2.88,-2.88,-2.88,0,0]},{"name":"Full Bass","default":true,"gains":[4.8,5.76,5.76,3.36,0.96,-2.4,-4.8,-6.24,-6.72,-6.72]},{"name":"Full Treble","default":true,"gains":[-5.76,-5.76,-5.76,-2.4,1.44,6.72,9.6,9.6,9.6,10.08]},{"name":"Laptop Speakers","default":true,"gains":[2.88,6.72,3.36,-1.92,-1.44,0.96,2.88,5.76,7.68,8.64]},{"name":"Full Bass & Treble","default":true,"gains":[4.32,3.36,0,-4.32,-2.88,0.96,4.8,6.72,7.2,7.2]},{"name":"MeinSave","gains":["4.62","4.25","2.95","2.03","0.18","-0.37","-0.55","-0.92","-2.77","-3.69"]}],"selected":{"name":"Live","default":true,"gains":[-2.88,0,2.4,3.36,3.36,3.36,2.4,1.44,1.44,1.44]},"state":"ON","whitelist":[]})</script>
+<body><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+  /*min-width:800px !important;*/
+}
+</style>
+<script>__wm.rw(0);</script>
+<div id="wm-ipp-base" style="display: block; direction: ltr; height: 68px;" lang="en">
+</div><div id="wm-ipp-print">The Wayback Machine - 
+https://web.archive.org/web/20071221145216/http://www.onekit.com/store/review/hacking~dotdot~_art_or_science~question~.html</div>
+<script type="text/javascript">
+__wm.bt(675,27,25,2,"web","http://www.onekit.com/store/review/hacking~dotdot~_art_or_science~question~.html","20071221145216",1996,"/_static/",["/_static/css/banner-styles.css?v=fantwOh2","/_static/css/iconochive.css?v=qtvMKcIJ"], false);
+  __wm.rw(1);
+</script>
+<!-- END WAYBACK TOOLBAR INSERT -->
+
+
+<!-- Kontera ContentLink(TM);-->
+<script type="text/javascript">
+var dc_AdLinkColor = 'blue' ;
+var dc_UnitID = 14 ;
+var dc_PublisherID = 27201 ;
+var dc_adprod = 'ADL' ;
+</script>
+<script type="text/javascript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/KonaLibInline.js">
+</script><script language="JavaScript" src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/KonaLibBaseRM.js"></script>
+<!-- Kontera ContentLink(TM) -->
+
+
+
+
+
+
+
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tbody><tr>
+		<td class="bgline" colspan="2" align="right">
+
+	<table style="width:100%" cellspacing="0" cellpadding="0">
+		<tbody><tr>
+			<td class="small" width="100%" align="left">
+	
+			</td>
+			<td nowrap="nowrap">
+
+	<form action="/web/20071221145216/http://www.onekit.com/store/login/in.html" method="POST">
+	User: 
+	<input type="text" size="15" name="login">
+	Pass: 
+	<input type="password" size="15" name="password" value="">
+	<input type="submit" class="button" value="Log in"> 
+	<span class="small"><a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/password_reminder.html" class="mtop">Forget password?</a></span>
+	 / <a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/register.html" class="mtop b" title="Account registration will give you access to submit software, articles, news or comments.">Register New User</a>&nbsp;
+	</form>
+
+			</td>
+		</tr>
+	</tbody></table>
+
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+<table style="width:100%" cellspacing="0" cellpadding="0">
+	<tbody><tr>
+		<td class="logomain"></td>
+		<td class="logomain2" align="center">
+		<table cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td class="menutop" align="center">
+				<form name="search_form" method="get" action="/web/20071221145216/http://www.onekit.com/store/search.html">
+<select class="inp_search" name="category">
+<option value="0" selected="selected">All Categories
+</option><option value="1">Games
+</option><option value="2">Graphics &amp; Design
+</option><option value="3">MP3 &amp; Audio
+</option><option value="4">Internet
+</option><option value="5">System &amp; Utilities
+</option><option value="6">Home &amp; Education
+</option><option value="7">Business
+</option><option value="8">Web Development
+</option><option value="9">Software Development
+</option></select>
+<select name="content">
+<option value="1" selected="selected">Software (Downloads)
+</option><option value="2">Articles &amp; Reviews
+</option></select>
+<input type="text" name="query" maxlength="32" title="Fast Search URL is http://go.onekit.com">
+<input type="submit" class="button" value="Search">
+</form>
+
+				</td>
+			</tr>
+			<tr>
+				<td height="15"></td>
+			</tr>
+			<tr>
+				<td class="bgline4" align="left">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/issue.html" class="menu b red" title="Current issue"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/m_issue.gif" alt="Current issue" width="13" height="13" border="0"> Current issue</a>
+		<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|">
+		<a href="https://web.archive.org/web/20071221145216/http://phorum.onekit.com/" class="menu b" title="Forum and Community"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/m_forum.gif" alt="Forum and Community" width="20" height="13" border="0"> Forum &amp; Community</a>
+		<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|">
+		<a href="https://web.archive.org/web/20071221145216/http://software.onekit.com/" class="menu b" title="Onekit's Software"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/m_soft.gif" alt="Onekit's Software" width="13" height="13" border="0"> OneKit's Software</a>
+		<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/product_add.html" class="menu b" title="Submit Software (Submit PAD file)"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/m_submit.gif" alt="Submit software (submit PAD file)" width="13" height="13" border="0"> Submit software</a>
+				</td>
+			</tr>
+		</tbody></table>
+
+
+
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2" class="bgline3">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/" class="menu b" title="Home Page">home</a>
+		<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/links.html" class="menu b" title="Links to us. Links to other shareware sites">links</a>
+		<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/contact.html" class="menu b">about / contact us</a>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tbody><tr>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/games/200510.html" class="b cattab">Games</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/graphics_and_design/200510.html" class="b cattab">Graphics &amp; Design</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/mp3_and_audio/200510.html" class="b cattab">MP3 &amp; Audio</a>
+		</td>
+		<td class="tab1">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/internet/200510.html" class="b cattab1">Internet &amp; Networks</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/system_and_utilities/200510.html" class="b cattab">System &amp; Utilities</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/home_and_education/200510.html" class="b cattab">Home &amp; Education</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/business/200510.html" class="b cattab">Business</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/web_development/200510.html" class="b cattab">WebDev</a>
+		</td>
+		<td class="tab">
+		<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/software_development/200510.html" class="b cattab">SoftDev</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="headtitle" colspan="9">
+		Reviews &amp; Articles :: Hacking: Art or Science?
+		</td>
+	</tr>
+</tbody></table>
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+		<td class="bgline4 mainblocks small">
+<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/issue/200510.html" class="menu b">Issue: October 2005</a> &gt;
+<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/internet/200510.html" class="menu b">Internet &amp; Networks</a> &gt;
+Article "Hacking: Art or Science?"
+		</td>
+	</tr>
+	<tr>
+		<td class="mainblocks" valign="middle">
+		<h1><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/review.gif" alt="Hacking: Art or Science? (Hacking: Art or Science?)" width="28" height="24">&nbsp;  Hacking: Art or Science?</h1>
+		</td>
+	</tr>
+	<tr>
+		<td class="coverbg" width="100%" height="23"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/line_4.gif" alt="Internet &amp; Networks"></td>
+	</tr>
+	<tr>
+		<td class="mainblocks">
+<table cellspacing="8" cellpadding="8" border="0" align="right"><tbody><tr><td><table class="bord2" cellspacing="0" cellpadding="0" border="0" align="center">
+	<tbody><tr>
+		<td class="advertisetext"><a class="advertisetext" href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/advertise.html"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/adsline2.gif" alt="Advertisement on Onekit.com Software Magazine" width="90" height="13" border="0"></a></td>
+	</tr>
+	<tr>
+		<td class="featuredbg" width="160" height="600">
+			<script type="text/javascript">var d = new Date();r = escape(d.getTime()*Math.random());document.writeln('<script src="/store/banner/script_'+r+'?cat=4&x=160&y=600&uid=0"><\/script>');</script><script src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/script_685998432523.htm"></script>
+
+		</td>
+	</tr>
+</tbody></table></td></tr></tbody></table>
+
+
+<div class="txt">
+The argument regarding the principle nature of hacking - be it an art or
+ a science is not a new one. This paper hopes to discuss both the 
+meaning of the term “hack” and the underlying arguments for it being 
+defined as an art or a science in reference to the base principles and 
+basic methodologies of the discipline.
+<br>
+<br>Ultimately the question is this: Does the creative thinking required
+ to be a successful “hacker” outweigh the necessity for scientific 
+process? 
+<br>
+<br>The dictionary [www.dictionary.com] defines the term “hacking” in a computer security context as:
+<br>
+<br>
+<br><b>1. Informal. </b>
+<br>a. To write or refine computer programs skilfully.
+<br>b. To use one's skill in computer programming to gain illegal or 
+unauthorized access to a file or network: hacked into the company's 
+intranet. 
+<br>The origin of the term however is a far more relevant issue than the
+ “dictionary” definition itself – as is the subsequent media 
+bastardisation of the exact definition of the term, all of which needs 
+to be discussed before moving on to the main topic of this paper.
+<br>
+<br>
+<br><b>2. The Definition Of A Hacker</b>
+<br>
+<br>The term “hacking” in a computer science context was first coined in
+ the 1960’s – and its continuing extended usage widely attributed to 
+localised Massachusetts Institute of Technology (MIT) slang at the time,
+ where in the very beginning the term “hack” was synonymous with the 
+word “prank”. An early indication of the darker side of future hacking 
+perhaps but never the less in reference to this origin “hacking” could 
+basically and simply be defined as; 
+<br>
+<br>
+<br>“Making a system, program or piece of hardware do something that it was not designed to do.” 
+<br>
+<br>
+<br>Perhaps a good term to some up the meaning of “hacking” is 
+“tinkering”. Under this broad definition it’d be quite possible to 
+“hack” the toaster into cooking hotter than it was designed to do, or 
+anything else as mundane; the description of the hardware modification 
+involved would fall well within the constraints of the term – a good 
+hack. With the exception of the rather circumstantial, not to mention 
+retrospectively amusing ‘seed’ in the “prank” origin of the term; 
+hacking previous to perhaps the early to mid 1980’s had no real 
+demonised undertones, no media generated air of menace – all of which 
+such additions and confusions of the definition have emerged as commerce
+ and relatively un tech savvy and uneducated parties have had by nature 
+of the changes in day to day life become more involved with areas of 
+computer science and information technology in general, areas which at 
+the origin of the term hacking were quite alien to the man on the 
+street.
+<br>
+<br>As touched upon briefly above, the mass mainstream media have given 
+the term “hacking” a rather hard time since it’s initial outing in 1983 
+when American media outlets Newsweek and CBS News first used the term to
+ refer to “computer intruders”. Although at this point even those in the
+ computer community referred to such activity as "hacking" they surely 
+did not intend for its usage to intone the purely illegal areas of wider
+ “hacking” – areas that would later to be coined widely as “cracking” by
+ the same underground community.
+<br>
+<br>The upshot of this initial ‘definition by fire’ is a simple 
+misunderstanding of the wider meanings of the term “hacking” by the mass
+ media which perpetuates to this very day. While the educated 
+underground community largely still consider the term “hacking” to be 
+representative of the initial meaning of the phrase (ie. “making a 
+system, program or piece of hardware do something that it was not 
+designed to do”) the media have steamrollered the definition into 
+focusing, for the most part, on ‘illegal entry into computer systems’. A
+ small part of the broad definition of “hacking” which generally 
+(perhaps largely due to the media bastardisation of the term “hacking”) 
+is now referred to as “cracking” by the underground community at large.
+<br>
+<br>The differences between the terms could perhaps be defined as: 
+<br>
+<br>
+<br><b>Hacking:</b> Making a system, program or piece of hardware do something that it was not designed to do.
+<br>
+<br><b>Cracking:</b> Gaining access to a system, program, server or 
+piece of hardware via methods which bypass any security in place or give
+ the ‘cracker’ inflated privileges within the targeted system, program, 
+server or hardware.
+<br>
+<br>
+<br>The arguments about definition and scope of the term “hacking” 
+aside, the important fact (in terms of this paper) remains that as far 
+as the wider population are concerned “cracking” is either synonymous 
+with the term “hacking”, or irrelevant in the face of the term 
+“hacking”. To the man on the street “the hacker” has become an evil 
+figure lurking in dark cellars surrounded by computer screens ready to 
+steal credit card details online or deface websites – the media 
+bastardisation is at this time complete and this is something the 
+underground community now have to live with; not to mention a prime 
+candidate for future more careful use of language both by specialised 
+communities and the media who always eventually pick up on the slang 
+used by such specialised communities.
+<br>
+<br>Despite this, and as a historical lead on to the rest of this paper 
+it is very interesting to note that the original definition of the term 
+could also be applied to another group of individuals within society who
+ have not been so demonised. Think carefully: 
+<br>
+<br>What are scientists doing if not making a system, program or piece 
+of hardware do something that it was not designed to do? Where system, 
+program or piece of hardware equals any area of science brought into 
+question. This concept will be explored further later.
+<br>
+<br>It is this comparison – between hackers and early scientists - which
+ inspired this paper. Is original science just a retrospective 
+redefinition of “hacking” – that is to say could the 1960’s term hacking
+ be used to describe the thinking process behind the scientific 
+revolution? Were the goals and methodologies of the original scientists 
+similar in essence to those of the original “hackers” and does this 
+suggest that “hacking” as we know it (be it art or science) is the first
+ step along the road of discovery in terms of newly discovered 
+disciplines?
+<br>
+<br>Did those original hackers at MIT just design a slang term for the 
+process of early developmental science? Personally, I think they 
+probably did.
+<br>
+<br>Conversely and moving onto the fundamental topic for this paper, 
+despite it’s apparent similarities with the early stages of science is 
+“hacking” in fact more of an art form than a true science; does the 
+experimental and non-linear nature of “hacking” have more in common with
+ artistic exploration than scientific process?
+<br>
+<br>
+<br><b>3. Basic “Hacking” Methodologies</b>
+<br>
+<br>From here on in, and having discussed at length the fate of the word
+ “hacking” at the hands of the mass media, the phrase will now be used 
+on that same media’s terms; “hacking” will now essentially become 
+“cracking” also – this to save on later confusion and arguments as 
+regard the meaning of the word in the context of this paper.
+<br>
+<br>In essence the basic method for a “hack” can be defined fairly 
+simply. The process, although never defined definitively, can be quite 
+linear in it’s execution:
+<br>
+<br>
+<br>1. Approach a target.
+<br>2. Define possible attack vectors for acquired target.
+<br>3. Select most efficient attack vector.
+<br>4. Execute attack.
+<br>
+<br>Although being mainly in reference to “Cracking” the above method 
+can equally be applied to most if not all forms of ‘traditional’ 
+hacking. Find a problem, find ways around the problem, choose the most 
+efficient way around the problem; execute the hack. The nature of the 
+“hack” makes no difference.
+<br>
+<br>And although on occasion “hackers” may stray from this process, 
+perhaps into the realms of what can be defined as “Voodoo Hacking” – a 
+fun system which has no real process and is basically executed at random
+ with the hope of producing at least some result, that result being the 
+one you were striving to achieve or, in most cases, not.
+<br>
+<br>As with the initial argument this very examination of the process 
+has presented us with two sides of the coin; a very scientific approach 
+and a random perhaps more artistic approach – both methodologies which 
+all “hackers” have used at one stage or another during their own 
+personal learning process I am sure.
+<br>
+<br>But which is most representative of the overall tone of the discipline?
+<br>
+<br>
+<br><b>4. The Argument For Science</b>
+<br>
+<br>The mentality of curiosity necessary to succeed in scientific 
+research is certainly equitable to that which is needed to succeed as “a
+ hacker”, and although on the face of it making something “do that which
+ it was not intended to do” is essentially unscientific - as mentioned 
+earlier on in this paper some comparison can be drawn between that very 
+foundation of “hacking” and scientific endeavour. 
+<br>
+<br>When the Wright brothers set out to create a flying machine, they 
+were essentially setting out to make a solid object incapable of natural
+ flight, fly; what real difference between that and our defined terms 
+are there?
+<br>
+<br>History is littered with such examples.
+<br>
+<br>The existence of various patterns and the factor of, all be it non 
+definitive, ‘set rules’ in the realms of “hacking” also makes it similar
+ to conventional sciences on a fundamental level; no matter how many 
+vulnerabilities and exploits we may find on, for example a Linux server,
+ ultimately it is still a Linux server and still operates upon the set 
+of rules that Linux servers operate upon; there are exceptions and later
+ additions to these rules in terms of perhaps patches and discovered 
+vulnerabilities’, but this process of discovery and amendment is no 
+different to the process of scientific theory which are, from time to 
+time, discredited, rethought or amended as we better our understanding 
+of the subject matter.
+<br>
+<br>Going as far as to put all of the above aside for a moment, the main
+ argument for hacking being a scientific endeavour is as simple as a set
+ basis from which to work. No matter what is being “hacked” it will 
+without exception have a fundamental set of rules from which you can 
+initially begin to work down “the hacking process” (as discussed earlier
+ in the ‘Basic “Hacking” Methodologies’ section). You cannot “hack” thin
+ air – you can create art from thin air.
+<br>
+<br>
+<br><b>5. The Argument For Art</b>
+<br>
+<br>A love of “hacking” (not to be confused with a love of the scene, 
+which is something else entirely) is commonplace amongst self proclaimed
+ hackers and professional Infosec workers alike. It’s true to say that 
+unlike any other topic known to me the area of computer security 
+requires a certain passion; one that many “hackers” would argue 
+outweighs the passion required to participate successfully in any other 
+technical activity – indeed a required passion is a trait “hacking” 
+shares with many of the arts in stark contrast to the sciences.
+<br>
+<br>Second to this is the indisputable fact that despite the existence 
+of any rudimentary scientific process, creativity is without a doubt the
+ key to success in hacking; more so than with any other conventional 
+science. Thinking “outside the box” is the norm when discussing 
+“hacking” issues; not a convoluted buzzword designed to inspire 
+artificially fostered creative thinking.
+<br>
+<br>Equally and again despite the theoretical existence of rudimentary 
+scientific processes, patterns and rules within the realms of hacking it
+ is often the case that these rules, more so than with only scientific 
+discipline can be bent or even flat out broken. “Hacking” is a very 
+mobile art in which definitions and rules change on a constant basis – 
+so much so that it is still possible to achieve some levels of success 
+without even being aware of said theoretical processes, patterns and 
+rules in the first place (the afore mentioned ‘passion’ in some cases 
+being enough) – a simple fact that makes “hacking” instantly very 
+different from conventional sciences in which a base knowledge of the 
+subject is crucial.
+<br>
+<br>The question of style is always likely to float to the surface 
+sooner or later when discussing hacking and it’s artistic or scientific 
+definition. A hacker’s style and indeed the very substance of his work 
+is almost always different from his peers. Two targeted hacks (not to be
+ confused with script kiddie adventures) are rarely ever identical, and 
+even less likely embarked upon with the same motive; it has been 
+suggested that tracking repeat hackers (in particular those who deface 
+websites) by their style (ie. choice of attack vector, time of 
+execution, style of defacement and apparent motive) could prove an 
+efficient way to ascertain a black hat’s future targets and even gather 
+incriminating evidence against them. This is perhaps the most damning 
+argument for hacking having become more of an art form than a science, 
+could you claim the above for any conventional scientific discipline?
+<br>
+<br>Or is it simply the case that in conventional science the rules are too rigid to allow for any real “style” in process?
+<br>
+<br>
+<br><b>6. Conclusion</b>
+<br>
+<br>All of the above is of course, just my opinion. The beauty of this 
+argument is not only the depth at which you can draw comparison, 
+especially historically – but the fact that ultimately it does not 
+really matter. 
+<br>
+<br>From it’s origins in the 1960’s (and perhaps as discussed earlier in
+ this paper, beyond) to this very day hacking has become an evolving 
+activity. Hacking and “what constitutes hacking” changes, and by doing 
+so incorporates both new levels of scientific method and artistic 
+creativity.
+<br>
+<br>The conclusion to this paper is simply a couple of questions which must be answered by the individual: 
+<br>
+<br>
+<br>• Can a scientist be artistic with his chosen discipline?
+<br>
+<br>• Are you an artist or a scientist?
+<br>
+<br>
+<br>Personally I’d like to think that a hacker can be artistic in his 
+work while being more of a scientist than anything else. But, it’s all 
+just opinion, what’s yours?
+<br>
+<br>
+<br><br>
+<b title="Related links to article ''Hacking: Art or Science?''">Related Links:</b><br>
+<ul>
+
+
+<li><a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/internet/200510.html">Go back to category <b>Internet &amp; Networks</b> to read more reviews and articles.</a>
+</li><li><a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/reviews/issue/200510.html">Go back to Software Magazine's main page.</a>
+</li></ul>
+
+<div align="right">
+October 1, 2005<br>
+Author: <a href="https://web.archive.org/web/20071221145216/mailto:mark.hinge@whitedust.net">Mark Hinge</a></div>
+</div>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+		<td class="bgline3"></td>
+	</tr>
+	<tr>
+		<td class="mainblocks coverbg">
+
+
+			<table class="bord" cellspacing="0" cellpadding="0" border="0">
+					<tbody><tr>
+						<td class="mainblocks row">
+
+
+There are no users' comments
+
+
+<img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/vertline.gif" alt="|" width="7" height="16">
+
+
+<a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/review/hacking~dotdot~_art_or_science~question~.html?post_comment&amp;show_comments#post_comment">Post your comment</a><br>
+
+						</td>
+					</tr>
+			</tbody></table>
+
+
+
+
+
+
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+	<tbody><tr>
+		<td class="bottomcopyright">
+		Copyright 2003-2007 - Software Magazine, onekit.com, <a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/legal_notices.html" class="menu">Legal Notices</a>
+		</td>
+	</tr>
+	<tr>
+		<td class="logomain2 mainblocks" align="center">
+
+		<table><tbody><tr><td><table cellspacing="0" cellpadding="0" border="0" align="center">
+	<tbody><tr>
+		<td><a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/advertise.html"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/adsline.gif" alt="Advertisement" ufr9yw2wf="" width="22" height="90" border="0"></a></td>
+		<td class="featuredbg" width="728" height="90">
+			<script type="text/javascript">var d = new Date();r = escape(d.getTime()*Math.random());document.writeln('<script src="/store/banner/script_'+r+'?cat=4&x=728&y=90&uid=0"><\/script>');</script><script src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/script_50081127219.htm"></script>
+
+		</td>
+		<td><a href="https://web.archive.org/web/20071221145216/http://www.onekit.com/store/advertise.html"><img src="OneKIT%20Reviews%20&amp;%20Articles%20Hacking%20Art%20or%20Science-Dateien/adsline.gif" alt="Advertisement" ufr9yw2wf="" width="22" height="90" border="0"></a></td>
+	</tr>
+</tbody></table></td><td class="txt"></td></tr></tbody></table>
+
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+</body></html>
+<!-- generated time: 0.199872970581 -->
+<!--
+     FILE ARCHIVED ON 14:52:16 Dec 21, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 20:36:08 Jan 03, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 334.337
+  exclusion.robots: 0.228
+  exclusion.robots.policy: 0.22
+  cdx.remote: 0.073
+  esindex: 0.012
+  LoadShardBlock: 306.226 (3)
+  PetaboxLoader3.datanode: 135.821 (4)
+  CDXLines.iter: 18.609 (3)
+  load_resource: 104.593
+  PetaboxLoader3.resolve: 41.311
+-->

@@ -1,0 +1,23 @@
+Hackerethik
+
+Geschichte von Hackern
+  -> aus Geschichte
+  ab wann ist das ein Begriff? ("Hacking")
+  Was beschreibt einen Hacker/Woher kommt das?
+  kleine Anektdote <-> Beispiele
+Was ist das/Was gibt es überhaupt? (Hacker)
+  Was für Hacking gibt es (Phishing, Würmer, Trolle, Doxing, etc.)
+    Methoden
+  Was gibt es für Unterschiedungen
+  Motive! von Hacking
+
+  Black/White/Grey Hats <-> Ethical Hacking
+  Hacktivism
+
+Geschichte der Hackerethik (mit Bezug auf Geschichte von Hackern)
+Grundsätze der Hackerethik
+  kurz nennen und dann ethisch einordnen
+    -> Beispiele zu jedem Grundsatz
+
+Digitale Ethik vs. Hackerethik
+  kurze Definition für Digitale Ethik
